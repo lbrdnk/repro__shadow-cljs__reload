@@ -1,0 +1,16 @@
+{:source-paths ["src/main" "src/gen"]
+ 
+ :dependencies [[reagent "1.2.0"]]
+
+ :builds {:default-repro {:target           :react-native
+                          :init-fn          com.lbrdnk.shadow-reload-repro.default-repro/init
+                          :output-dir       "app"
+                          :compiler-options {:infer-externs :auto}
+                          :devtools         {:autoload true
+                                             #_#_:reload-strategy :full}}
+          :nested-repro {:target           :react-native
+                         :init-fn          com.lbrdnk.shadow-reload-repro.nested-repro/init
+                         :output-dir       "app"
+                         :compiler-options {:infer-externs :auto}
+                         :devtools         {:autoload true
+                                            #_#_:reload-strategy :full}}}}
